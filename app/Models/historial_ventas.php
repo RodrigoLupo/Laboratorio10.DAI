@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class historial_ventas extends Model
 {
     use HasFactory;
+    public function Encargado()
+        {
+            return $this->belongsTo(encargados::class);
+        }
+    public function Producto()
+        {
+            return $this->belongsTo(productos::class);
+        }
 }

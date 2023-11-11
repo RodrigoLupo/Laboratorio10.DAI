@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class administradores extends Model
 {
     use HasFactory;
+    public function Usuario()
+        {
+            return $this->belongsTo(usuarios::class);
+        }
+    public function Tienda()
+        {
+            return $this->belongsTo(tienda::class);
+        }
 }

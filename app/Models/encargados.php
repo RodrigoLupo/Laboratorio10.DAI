@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class encargados extends Model
 {
     use HasFactory;
+    public function Usuario()
+        {
+            return $this->belongsTo(usuarios::class);
+        }
+    public function Sede()
+        {
+            return $this->belongsTo(sedes::class);
+        }
+    public function Historial_venta()
+        {
+            return $this->hasMany(historial_ventas::class);
+        }
 }

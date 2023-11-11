@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class registros_boletas extends Model
 {
     use HasFactory;
+    public function Registro()
+    {
+        return $this->belongsTo(registros::class);
+    }
+    public function Boleta()
+    {
+        return $this->belongsTo(boletas::class);
+    }
 }
